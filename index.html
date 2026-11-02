@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Друзі Тварин - Цілодобова ветлікарня</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Literata&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="images/logo.png" alt="Друзі Тварин"></a>
-        <nav>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Друзі Тварин"></a>
+        </div>
+        <nav class="navigation">
             <ul>
                 <li><a href="#">Особистий кабінет</a></li>
                 <li><a href="about.html">Про нас</a></li>
                 <li><a href="#">Блог</a></li>
                 <li><a href="#">Новини та акції</a></li>
                 <li><a href="contacts.html">Контакти</a></li>
-                <li><a href="#"><img src="images/location.png" alt="">Конотоп</a></li>
             </ul>
         </nav>
+        <div class="konotop">
+            <a href="#"><img src="images/location.png" alt="">Конотоп</a>
+        </div>
     </header>
 
-    <main>
-        <h1>Турбота та любов до ваших котиків</h1>
-        <p>Сучасна діагностика, комфортний стаціонар і лагідний догляд 24/7</p>
-        <a href="recording.html" class="button">Записатися</a>
-        <img src="images/kittens.png" alt="Руді кошенята на дерев'яних полицях">
+    <main class="container">
+        <div class="content">
+            <div class="text-section">
+                <h1>Турбота та любов<br>до ваших котиків</h1>
+                <p>Сучасна діагностика, комфортний стаціонар і лагідний догляд 24/7</p>
+            </div>
+            <div class="button-section">
+                <a href="recording.html" class="button">Записатися</a>
+            </div>
+            <div class="image-section">
+                <img src="images/kittens.png" alt="Руді кошенята на дерев'яних полицях">
+            </div>
+        </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <ul>
             <li><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a></li>
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a></li>

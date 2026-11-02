@@ -4,44 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оформлення запису - Друзі Тварин</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Literata&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="images/logo.png" alt="Друзі Тварин"></a>
-        <nav>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Друзі Тварин"></a>
+        </div>
+        <nav class="navigation">
             <ul>
                 <li><a href="#">Особистий кабінет</a></li>
                 <li><a href="about.html">Про нас</a></li>
                 <li><a href="#">Блог</a></li>
                 <li><a href="#">Новини та акції</a></li>
                 <li><a href="contacts.html">Контакти</a></li>
-                <li><a href="#"><img src="images/location.png" alt="">Конотоп</a></li>
             </ul>
         </nav>
+        <div class="konotop">
+            <a href="#"><img src="images/location.png" alt="">Конотоп</a>
+        </div>
     </header>
 
-    <main>
-        <a href="index.html">&lt; Назад</a>
+    <main class="container">
+        <a href="index.html" class="back-link">&lt; Назад</a>
         <h1>Оформлення запису</h1>
 
-        <form>
-            <div>
+        <form class="booking-form">
+            <div class="field">
                 <img src="images/icon-user.png" alt="">
                 <input type="text" name="name" placeholder="Введіть своє ім'я">
             </div>
-            <div>
+            <div class="field">
                 <img src="images/icon-calendar.png" alt="">
                 <input type="text" name="datetime" placeholder="Введіть дату | час">
             </div>
-            <div>
+            <div class="field field-large">
                 <img src="images/icon-problem.png" alt="">
                 <textarea name="problem" placeholder="Введіть проблему"></textarea>
             </div>
-            <button type="submit">Записатися</button>
+            <button type="submit" class="button">Записатися</button>
         </form>
     </main>
 
-    <footer>
+    <footer class="footer">
         <ul>
             <li><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a></li>
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a></li>

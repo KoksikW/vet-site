@@ -1,0 +1,436 @@
+/* ===== Базові стилі для всього сайту ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fdfaf6;
+    font-family: "Inter", sans-serif;
+    color: #5b6478;
+}
+
+main {
+    flex: 1;
+}
+
+input,
+textarea,
+button {
+    font-family: inherit;
+}
+
+h1 {
+    margin-bottom: 4px;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #1f2a44;
+}
+
+/* ===== Шапка ===== */
+.header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 95px;
+    padding: 17px 40px 0 53px;
+}
+
+.logo img {
+    display: block;
+    width: 71px;
+    height: 71px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.navigation li {
+    margin-right: 52px;
+}
+
+.navigation li:last-child {
+    margin-right: 0;
+}
+
+.navigation a {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none; /* прибирає стандартне підкреслення у гіперпосилання */
+    color: #1f2a44;
+}
+
+.navigation a:hover {
+    color: #d3af59;
+}
+
+.konotop {
+    margin-left: 5px;
+}
+
+.konotop a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #d4af5a;
+}
+
+.konotop img {
+    width: 25px;
+    height: 25px;
+}
+
+/* ===== Основний контент (спільне для всіх сторінок) ===== */
+.container {
+    padding: 0 40px 20px 155px;
+}
+
+.back-link {
+    display: block;
+    width: max-content;
+    margin-top: 36px;
+    margin-bottom: 5px;
+    padding: 10px 0;
+    font-family: "Literata", serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: #d3af59;
+}
+
+.container > p {
+    font-size: 32px;
+    line-height: normal;
+    color: #5b6478;
+}
+
+.container > p + p {
+    margin-top: 4px;
+}
+
+/* Кнопка */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 553px;
+    max-width: 100%;
+    height: 68px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 24px;
+    background-color: #d3af59;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25); /* тінь */
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(31, 42, 68, 0.85);
+    cursor: pointer; /* при наведенні курсор змінюється на руку */
+}
+
+.button:hover {
+    background-color: #c49f4a;
+}
+
+.container > .button {
+    margin-top: 36px;
+}
+
+/* ===== Головна сторінка ===== */
+.content {
+    display: grid;
+    grid-template-columns: 466px 725px;
+    grid-template-rows: auto 1fr;
+}
+
+.text-section {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    z-index: 1;
+    width: 668px;
+    margin-top: 132px;
+}
+
+.text-section h1 {
+    margin-bottom: 24px;
+}
+
+.text-section p {
+    font-size: 32px;
+    line-height: normal;
+    color: #5b6478;
+}
+
+.button-section {
+    grid-column: 1;
+    grid-row: 2;
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+.image-section {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+.image-section img {
+    display: block;
+    width: 725px;
+    height: auto;
+}
+
+/* ===== Секції (Про нас, Контакти) ===== */
+main section {
+    margin-top: 36px;
+}
+
+main section h2 {
+    margin-bottom: 12px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: normal;
+    color: #1f2a44;
+}
+
+main section p {
+    font-size: 24px;
+    line-height: normal;
+    color: #5b6478;
+}
+
+/* Блок «Наші послуги» */
+.services {
+    width: 1130px;
+    max-width: 100%;
+    margin-top: 22px;
+    padding: 25px;
+    border: 1px solid #000;
+    border-radius: 24px;
+    background-color: #f3e7ce;
+}
+
+.services ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    row-gap: 12px;
+    list-style-type: circle;
+    list-style-position: inside;
+    font-size: 32px;
+    line-height: normal;
+    color: #5b6478;
+}
+
+/* Блок «Наша команда» (макет Про нас) */
+.team {
+    margin-top: 22px;
+}
+
+.team p {
+    font-size: 32px;
+}
+
+/* Таблиця команди */
+table {
+    width: 899px;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #000;
+    border-radius: 24px;
+    background-color: #f3e7ce;
+    font-size: 24px;
+}
+
+th,
+td {
+    padding: 14px 25px;
+    text-align: left;
+    border-bottom: 1px solid #000;
+}
+
+th {
+    font-weight: 700;
+    color: #1f2a44;
+}
+
+td {
+    color: #5b6478;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Відгуки */
+blockquote {
+    width: 1130px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding: 25px;
+    border: 1px solid #000;
+    border-radius: 24px;
+    background-color: #f3e7ce;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2a44;
+}
+
+blockquote p {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color: #5b6478;
+}
+
+/* Форма «Зв'яжіться з нами» */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 899px;
+    max-width: 100%;
+}
+
+.contact-form label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2a44;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    background-color: #f3e7ce;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2a44;
+}
+
+.contact-form textarea {
+    height: 192px;
+    resize: none;
+}
+
+.contact-form .button {
+    align-self: flex-start;
+    margin-top: 12px;
+}
+
+/* ===== Сторінка «Контакти» ===== */
+.contact-list {
+    list-style-type: none;
+    font-size: 24px;
+    line-height: normal;
+    color: #5b6478;
+}
+
+.contact-list li {
+    margin-bottom: 8px;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 899px;
+    height: 450px;
+    border: 1px solid #000;
+    border-radius: 24px;
+}
+
+/* ===== Форма запису (Оформлення запису) ===== */
+.booking-form {
+    margin-top: 35px;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 899px;
+    max-width: 100%;
+    height: 64px;
+    margin-bottom: 36px;
+    padding: 10px 15px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    background-color: #f3e7ce;
+}
+
+.field img {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.field input,
+.field textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2a44;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: #b7b7b6;
+}
+
+.field:focus-within {
+    outline: 2px solid #d3af59;
+}
+
+.field-large {
+    align-items: flex-start;
+    height: 192px;
+}
+
+.field-large textarea {
+    height: 100%;
+    resize: none;
+}
+
+/* ===== Підвал ===== */
+.footer {
+    padding: 40px 0 23px 155px;
+}
+
+.footer ul {
+    list-style-type: none;
+    display: flex;
+    gap: 22px;
+}
+
+.footer li {
+    padding: 10px;
+}
+
+.footer img {
+    display: block;
+    width: 56px;
+    height: 56px;
+}

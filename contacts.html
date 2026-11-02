@@ -7,29 +7,37 @@
     <meta name="description" content="Контакти ветеринарної клініки Друзі Тварин: адреса, телефон, графік роботи та карта проїзду">
     <meta name="author" content="Друзі Тварин">
     <link rel="canonical" href="https://koksikw.github.io/vet-site/contacts.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Literata&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="images/logo.png" alt="Друзі Тварин"></a>
-        <nav>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Друзі Тварин"></a>
+        </div>
+        <nav class="navigation">
             <ul>
                 <li><a href="#">Особистий кабінет</a></li>
                 <li><a href="about.html">Про нас</a></li>
                 <li><a href="#">Блог</a></li>
                 <li><a href="#">Новини та акції</a></li>
                 <li><a href="contacts.html">Контакти</a></li>
-                <li><a href="#"><img src="images/location.png" alt="">Конотоп</a></li>
             </ul>
         </nav>
+        <div class="konotop">
+            <a href="#"><img src="images/location.png" alt="">Конотоп</a>
+        </div>
     </header>
 
-    <main>
-        <a href="index.html">&lt; Назад</a>
+    <main class="container">
+        <a href="index.html" class="back-link">&lt; Назад</a>
         <h1>Контакти</h1>
 
         <section id="contact-info">
             <h2>Як нас знайти</h2>
-            <ul>
+            <ul class="contact-list">
                 <li>Адреса: м. Конотоп, вул. Центральна, 1</li>
                 <li>Телефон: +380 00 000 00 00</li>
                 <li>Графік роботи: цілодобово, без вихідних</li>
@@ -38,11 +46,11 @@
 
         <section id="map">
             <h2>Ми на карті</h2>
-            <iframe src="https://maps.google.com/maps?q=%D0%9A%D0%BE%D0%BD%D0%BE%D1%82%D0%BE%D0%BF&amp;output=embed" width="600" height="450" title="Карта: ветеринарна клініка Друзі Тварин у Конотопі" loading="lazy"></iframe>
+            <iframe src="https://maps.google.com/maps?q=%D0%9A%D0%BE%D0%BD%D0%BE%D1%82%D0%BE%D0%BF&amp;output=embed&amp;hl=uk" width="600" height="450" title="Карта: ветеринарна клініка Друзі Тварин у Конотопі" loading="lazy"></iframe>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <ul>
             <li><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a></li>
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a></li>
