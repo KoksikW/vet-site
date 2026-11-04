@@ -248,38 +248,6 @@ main section p {
     font-size: 32px;
 }
 
-/* Таблиця команди */
-table {
-    width: 899px;
-    max-width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    border: 1px solid #000;
-    border-radius: 24px;
-    background-color: #f3e7ce;
-    font-size: 24px;
-}
-
-th,
-td {
-    padding: 14px 25px;
-    text-align: left;
-    border-bottom: 1px solid #000;
-}
-
-th {
-    font-weight: 700;
-    color: #1f2a44;
-}
-
-td {
-    color: #5b6478;
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
 /* Відгуки */
 blockquote {
     width: 1130px;
@@ -433,4 +401,109 @@ iframe {
     display: block;
     width: 56px;
     height: 56px;
+}
+
+/* ===== Лабораторна робота 6: таблиці та форматування тексту ===== */
+
+/* Стилі для таблиці */
+.styled-table {
+    width: 100%;
+    max-width: 1130px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #f3e7ce;
+    font-size: 24px;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #c9b88f;
+}
+
+.styled-table th {
+    background-color: #e6d3a8;
+    font-weight: bold;
+    color: #1f2a44;
+}
+
+.styled-table td {
+    color: #5b6478;
+}
+
+/* Зебра-смуги для рядків */
+.styled-table tr:nth-child(even) {
+    background-color: #f8efdc;
+}
+
+/* Підсвічування при наведенні */
+.styled-table tr:hover {
+    background-color: #ecdcb4;
+}
+
+/* Адаптивність таблиці */
+@media screen and (max-width: 600px) {
+    .styled-table,
+    .styled-table thead,
+    .styled-table tbody,
+    .styled-table th,
+    .styled-table td,
+    .styled-table tr {
+        display: block;
+    }
+
+    .styled-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .styled-table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    .styled-table td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .styled-table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+    }
+}
+
+/* Форматування тексту на сторінці «Про нас» */
+.about-page h1,
+.about-page h2,
+.about-page h3 {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+}
+
+.about-page p {
+    margin-bottom: 15px;
+}
+
+/* Посилання (для всього сайту) */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button:hover {
+    text-decoration: none;
 }

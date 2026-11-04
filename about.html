@@ -33,7 +33,7 @@
         </div>
     </header>
 
-    <main class="container">
+    <main class="container about-page">
         <a href="index.html" class="back-link">&lt; Назад</a>
         <h1>Про нашу ветеринарну клініку</h1>
 
@@ -56,27 +56,71 @@
 
         <section id="our-team">
             <h2>Наша команда</h2>
-            <table>
-                <tr>
-                    <th>Ім'я</th>
-                    <th>Посада</th>
-                    <th>Досвід</th>
-                </tr>
-                <tr>
-                    <td>Др. Іванов</td>
-                    <td>Головний ветеринар</td>
-                    <td>15 років</td>
-                </tr>
-                <tr>
-                    <td>Др. Петренко</td>
-                    <td>Хірург</td>
-                    <td>10 років</td>
-                </tr>
-                <tr>
-                    <td>Др. Коваленко</td>
-                    <td>Лікар-діагност</td>
-                    <td>8 років</td>
-                </tr>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Ім'я</th>
+                        <th scope="col">Посада</th>
+                        <th scope="col">Досвід</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Ім'я">Др. Іванов</td>
+                        <td data-label="Посада">Головний ветеринар</td>
+                        <td data-label="Досвід">15 років</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Ім'я">Др. Петренко</td>
+                        <td data-label="Посада">Хірург</td>
+                        <td data-label="Досвід">10 років</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Ім'я">Др. Коваленко</td>
+                        <td data-label="Посада">Лікар-діагност</td>
+                        <td data-label="Досвід">8 років</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="schedule">
+            <h2>Графік роботи лікарів</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Лікар</th>
+                        <th scope="col">Посада</th>
+                        <th scope="col">Дні</th>
+                        <th scope="col">Години</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Лікар">Др. Іванов</td>
+                        <td data-label="Посада">Головний ветеринар</td>
+                        <td data-label="Дні">Пн-Пт</td>
+                        <td data-label="Години">08:00-16:00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Лікар">Др. Петренко</td>
+                        <td data-label="Посада">Хірург</td>
+                        <td data-label="Дні">Вт, Чт, Сб</td>
+                        <td data-label="Години">10:00-18:00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Лікар">Др. Коваленко</td>
+                        <td data-label="Посада">Лікар-діагност</td>
+                        <td data-label="Дні">Пн, Ср, Пт</td>
+                        <td data-label="Години">12:00-20:00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Лікар">Др. Мельник</td>
+                        <td data-label="Посада">Черговий лікар</td>
+                        <td data-label="Дні">Щодня</td>
+                        <td data-label="Години">20:00-08:00</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
 
