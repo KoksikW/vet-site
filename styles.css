@@ -507,3 +507,116 @@ a:hover {
 .button:hover {
     text-decoration: none;
 }
+
+/* ===== Лабораторна робота 7: блокова модель CSS ===== */
+
+/* Форма «Зв'яжіться з нами» як окремий блок: padding, border, margin, тінь */
+.contact-form {
+    margin-top: 20px;
+    padding: 30px;
+    border: 1px solid #c9b88f;
+    border-radius: 24px;
+    background-color: #fdfaf6;
+    box-shadow: 0 4px 12px rgba(31, 42, 68, 0.12);
+}
+
+/* Підписи: блоковий елемент, відступ над кожною групою «підпис + поле» */
+.contact-form label {
+    display: block;
+    margin-top: 8px;
+}
+
+.contact-form label:first-child {
+    margin-top: 0;
+}
+
+/* Поля: повна ширина контейнера, плавна зміна рамки */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Поля при наведенні та фокусі: золота рамка */
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-color: #d3af59;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #d3af59;
+    box-shadow: 0 0 0 3px rgba(211, 175, 89, 0.35);
+}
+
+/* Кнопка: анімація при наведенні (підйом і збільшення тіні) */
+.contact-form .button {
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.contact-form .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contact-form .button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Форма запису («Оформлення запису»): той самий стиль, що й у форми «Зв'яжіться з нами» */
+.booking-form {
+    width: 899px;
+    max-width: 100%;
+    padding: 30px 30px 0;
+    border: 1px solid #c9b88f;
+    border-radius: 24px;
+    background-color: #fdfaf6;
+    box-shadow: 0 4px 12px rgba(31, 42, 68, 0.12);
+}
+
+.booking-form .field {
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-form .field:hover {
+    border-color: #d3af59;
+}
+
+.booking-form .field:focus-within {
+    outline: none;
+    border-color: #d3af59;
+    box-shadow: 0 0 0 3px rgba(211, 175, 89, 0.35);
+}
+
+.booking-form .button {
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.booking-form .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
+}
+
+.booking-form .button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Кнопка «Записатися» на головній сторінці: така сама анімація */
+.button-section .button {
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button-section .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button-section .button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+}
