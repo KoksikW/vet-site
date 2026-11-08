@@ -40,6 +40,23 @@
         <section id="about-us">
             <h2>Хто ми</h2>
             <p>Ми - команда професіоналів, віддана здоров'ю та щастю ваших улюбленців. Наша клініка працює вже понад 10 років, надаючи якісні ветеринарні послуги.</p>
+
+            <div id="imageSlider">
+                <img src="images/slide1.jpg" alt="Ветеринар оглядає рудого кота">
+                <img src="images/slide2.jpg" alt="Затишний стаціонар для котів">
+                <img src="images/slide3.jpg" alt="Руде кошеня на в'язаному пледі">
+                <button type="button" id="prevBtn" class="slider-zone slider-prev" aria-label="Попереднє зображення">
+                    <span class="slider-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 L7 12 L15 20"/></svg></span>
+                </button>
+                <button type="button" id="nextBtn" class="slider-zone slider-next" aria-label="Наступне зображення">
+                    <span class="slider-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 L17 12 L9 20"/></svg></span>
+                </button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
         </section>
 
         <section id="our-services" class="services">
@@ -138,7 +155,7 @@
 
         <section id="contact-us">
             <h2>Зв'яжіться з нами</h2>
-            <form action="/submit-form" method="post" class="contact-form">
+            <form id="contactForm" action="/submit-form" method="post" class="contact-form">
                 <label for="name">Ім'я:</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Email:</label>
@@ -158,5 +175,7 @@
             <li><a href="https://www.tiktok.com/"><img src="images/tiktok.png" alt="TikTok"></a></li>
         </ul>
     </footer>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
