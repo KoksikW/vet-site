@@ -727,3 +727,495 @@ a:hover {
 .dot.active {
     background-color: #fdfaf6;
 }
+
+/* ===== Глобальна правка: адаптивність, центрування, шрифти, палітра ===== */
+/* Блок лише доповнює старі правила вище (перекриває їх), старий код не видалено */
+
+:root {
+    --bg: #fdfaf6;
+    --card: #f3e7ce;
+    --gold: #d3af59;
+    --gold-text: #8f6f1f;   /* темніший золотий для тексту: читабельний на світлому фоні */
+    --navy: #1f2a44;
+    --text: #5b6478;
+    --line: #c9b88f;        /* м'яка бежева рамка замість чорної */
+    --hint: #7d8296;        /* колір підказок у полях */
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* --- Шрифти: легша ієрархія --- */
+h1 {
+    margin-bottom: 12px;
+    font-size: clamp(24px, 3.4vw, 32px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    overflow-wrap: break-word;
+}
+
+.text-section h1 {
+    margin-bottom: 20px;
+    font-size: clamp(28px, 4.4vw, 50px);
+}
+
+.text-section p {
+    font-size: clamp(18px, 2.4vw, 24px);
+    line-height: 1.45;
+}
+
+main section h2 {
+    margin-bottom: 10px;
+    font-size: clamp(20px, 2.4vw, 24px);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+main section p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.container > p {
+    font-size: clamp(18px, 2.2vw, 22px);
+    line-height: 1.5;
+}
+
+.team p {
+    font-size: 17px;
+}
+
+.contact-list {
+    font-size: 17px;
+}
+
+blockquote {
+    font-size: 17px;
+}
+
+.styled-table {
+    font-size: 16px;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 10px 12px;
+}
+
+.navigation a,
+.konotop a {
+    font-size: 14px;
+    letter-spacing: 0.04em;
+}
+
+.navigation a {
+    display: inline-block;
+    padding: 6px 0;
+}
+
+.konotop a {
+    color: var(--gold-text);
+}
+
+.konotop img {
+    width: 22px;
+    height: 22px;
+}
+
+.back-link {
+    margin-top: 16px;
+    margin-bottom: 4px;
+    font-size: 18px;
+    color: var(--gold-text);
+}
+
+.button {
+    width: 100%;
+    max-width: 460px;
+    height: 56px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+/* --- Шапка: одна лінія на ПК, дві лінії на телефоні --- */
+.header {
+    justify-content: space-between;
+    gap: 8px 24px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 20px 8px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.navigation {
+    order: 3;
+    flex-basis: 100%;
+}
+
+.navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px 22px;
+}
+
+.navigation li {
+    margin-right: 0;
+}
+
+.konotop {
+    margin-left: 0;
+}
+
+/* --- Основний контент: по центру сторінки --- */
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px 32px;
+}
+
+.container-wide {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.container-wide .content {
+    width: 100%;
+}
+
+.container:not(.container-wide) > h1,
+.container:not(.container-wide) > p {
+    text-align: center;
+}
+
+main section {
+    margin-top: 28px;
+}
+
+/* Сторінка «Про нас»: перекриває відступи заголовків з ЛР6 */
+.about-page h1 {
+    margin-bottom: 12px;
+}
+
+.about-page h2 {
+    margin-bottom: 10px;
+}
+
+/* Усі блоки на внутрішніх сторінках однакової ширини */
+.services,
+blockquote,
+.contact-form,
+#imageSlider,
+iframe {
+    width: 100%;
+    max-width: none;
+}
+
+.services,
+blockquote,
+.contact-form,
+.booking-form,
+iframe,
+#imageSlider {
+    border-color: var(--line);
+    border-radius: 20px;
+}
+
+.services {
+    margin-top: 16px;
+    padding: 22px 26px;
+}
+
+.services ul {
+    column-gap: 40px;
+    row-gap: 10px;
+    font-size: 19px;
+}
+
+iframe {
+    max-width: none;
+    height: 360px;
+}
+
+.field {
+    border-color: var(--line);
+}
+
+.field input,
+.field textarea {
+    min-width: 0;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: var(--hint);
+}
+
+.contact-form input,
+.contact-form textarea {
+    border-color: var(--line);
+}
+
+.contact-form label {
+    font-size: 16px;
+}
+
+/* Слайдер: пропорційний блок 16:9 замість фіксованої висоти */
+#imageSlider {
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+#imageSlider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* --- Форми: по центру, кнопка по центру --- */
+.contact-form {
+    padding: clamp(16px, 4vw, 30px);
+}
+
+.contact-form .button,
+.booking-form .button {
+    align-self: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.recording-page {
+    max-width: 720px;
+}
+
+.booking-form {
+    width: 100%;
+    max-width: none;
+    padding: 20px 16px 0;
+}
+
+.field {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 18px;
+}
+
+.field-large {
+    height: 160px;
+}
+
+.booking-form .button {
+    margin-bottom: 20px;
+}
+
+/* --- Головна сторінка --- */
+.content {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    grid-template-rows: auto auto;
+    column-gap: 24px;
+    align-items: center;
+}
+
+.text-section {
+    width: auto;
+    margin-top: 0;
+    align-self: end;
+}
+
+.button-section {
+    margin-top: 28px;
+    align-self: start;
+}
+
+.image-section {
+    align-self: center;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+}
+
+/* --- Підвал: по центру, великі іконки --- */
+.footer {
+    padding: 28px 16px 24px;
+}
+
+.footer ul {
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer li {
+    padding: 6px;
+}
+
+.footer img {
+    width: 64px;
+    height: 64px;
+}
+
+/* --- Планшет і ПК (від 700px) --- */
+@media screen and (min-width: 700px) {
+    .container {
+        padding: 0 40px 40px;
+    }
+
+    .footer img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .footer ul {
+        gap: 16px;
+    }
+
+    .booking-form {
+        padding: 30px 30px 0;
+    }
+
+    .booking-form .button {
+        margin-bottom: 30px;
+    }
+
+    .field {
+        margin-bottom: 24px;
+    }
+}
+
+/* --- ПК (від 1000px): шапка в один рядок --- */
+@media screen and (min-width: 1000px) {
+    .header {
+        padding: 16px 40px 8px;
+    }
+
+    .logo img {
+        width: 71px;
+        height: 71px;
+    }
+
+    .navigation {
+        order: 0;
+        flex: 1 1 auto;
+    }
+
+    .navigation ul {
+        gap: 4px 32px;
+    }
+}
+
+/* --- Телефон (до 820px): головна в одну колонку --- */
+@media screen and (max-width: 820px) {
+    .content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .text-section {
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 8px;
+        align-self: auto;
+        text-align: center;
+    }
+
+    .button-section {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 8px;
+        align-self: auto;
+    }
+
+    .button-section .button {
+        margin: 0 auto;
+    }
+
+    .image-section {
+        grid-column: 1;
+        grid-row: 3;
+        margin-top: 12px;
+    }
+
+    .image-section img {
+        max-width: 440px;
+        margin: 0 auto;
+    }
+}
+
+/* --- Малий телефон (до 600px) --- */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 17px;
+    }
+
+    .services {
+        padding: 18px;
+    }
+
+    .services ul {
+        grid-auto-flow: row;
+        grid-template-rows: none;
+        grid-template-columns: 1fr;
+        font-size: 18px;
+    }
+
+    blockquote {
+        padding: 18px;
+    }
+
+    iframe {
+        height: 280px;
+    }
+
+    .slider-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .slider-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .slider-zone {
+        padding: 0 8px;
+    }
+
+    .slider-dots {
+        bottom: 10px;
+    }
+
+    .field-large {
+        height: 140px;
+    }
+
+    /* Таблиці у вигляді карток: підпис ліворуч, значення праворуч */
+    .styled-table td {
+        padding: 8px 12px 8px 45%;
+    }
+
+    .styled-table td:before {
+        top: 8px;
+        left: 12px;
+    }
+}
